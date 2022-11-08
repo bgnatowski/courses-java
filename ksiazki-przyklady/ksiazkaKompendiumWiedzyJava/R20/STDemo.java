@@ -1,0 +1,19 @@
+// Demonstruje użycie klasy StringTokenizer
+import java.util.StringTokenizer;
+
+class STDemo {
+  static String in = "tytuł=Java. Kompendium programisty;" +
+    "autor=Schildt;" +
+    "wydawca=Helion;" +
+    "copyright=2019";
+
+  public static void main(String args[]) {
+    StringTokenizer st = new StringTokenizer(in, "=;");
+
+    while(st.hasMoreTokens()) {
+      String key = st.nextToken();
+      String val = st.nextToken();
+      System.out.println(key + "\t" + val);
+    }
+  }
+}
